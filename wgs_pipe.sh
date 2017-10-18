@@ -33,7 +33,7 @@ cd alla vostra cartella con i dati di padre/madre o sofia.
 #####################################
 
 # Mark Duplicates
-java -XX:ParallelGCThreads=20 -jar $PICARD_PATH/picard.jar MarkDuplicates INPUT=padre_bwa_sorted.bam OUTPUT=dedup_padre_bwa_sorted.bam METRICS_FILE=metrics.txt
+java -jar $PICARD_PATH/picard.jar MarkDuplicates INPUT=sofia_bwa_sorted.bam OUTPUT=dedup_sofia_bwa_sorted.bam METRICS_FILE=metrics.txt
 
 # Re-index bam
 java -XX:ParallelGCThreads=20 -jar $PICARD_PATH/picard.jar BuildBamIndex INPUT=dedup_padre_bwa_sorted.bam
